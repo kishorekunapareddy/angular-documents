@@ -8,20 +8,22 @@ export class Hero {
 
 @Component({
     selector: 'app-root',
-    template: 
+    template:
     `<h1> {{title}} </h1>
     <h2> {{hero.name}} Details! </h2>
-    <div><label>id:</label> hero.id </div>
-    <div><label>name: </label> hero.name</div>
-    <div><label>name:</label>
-    <input>[(ngModel0]</input>"hero.name" placeholder = name;</div>`
+    <div><label>id:</label> {{hero.id}} </div>
+    <div>
+        <label>name:</label>
+        <input [(ngModel)]="hero.name" placeholder="name">
+    </div>
+    `
 
 })
 
-export class AppComponent{
-    title = 'Heros List'
-    hero : Hero = {
+export class AppComponent {
+    title = 'Heros List';
+    hero: Hero = {
         id: 25,
-        name:'Kishore'
+        name: 'Kishore'
     };
 }
